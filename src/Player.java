@@ -8,6 +8,7 @@ public class Player {
 	
 	public Player(String oyuncuAdi) {
 		this.oyuncuAdi = oyuncuAdi;
+		this.ýnventory = new Inventory();
 	}
 
 	public void karakterSec() {
@@ -45,6 +46,9 @@ public class Player {
 		}
 		return secimID;
 		
+	}
+	public int gettoplamHasar () {
+		return this.getHasar() + this.getInventory().getHasar();
 	}
 	
 	public void karakterTanimla(String Cname, int damage , int healty , int money ) {  // kodu kýsaltmak için yukarýda kullanýldý.
